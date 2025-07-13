@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeepSeek 3D报告</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .card { padding: 20px; margin: 10px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .good { background: #d4edda; border-left: 5px solid #28a745; }
+        .warn { background: #fff3cd; border-left: 5px solid #ffc107; }
+        .bad { background: #f8d7da; border-left: 5px solid #dc3545; }
+        .status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .globe { background: #e9ecef; height: 200px; display: flex; justify-content: center; align-items: center; }
+        .globe-inner { width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #5cb85c, #204d74); position: relative; box-shadow: inset 0 0 50px #000; }
+        .globe-inner::before { content: ''; position: absolute; top: 20%; left: 30%; width: 40%; height: 40%; background: rgba(255,255,255,0.7); border-radius: 50%; }
+        .ai-section { background: #e8f4f8; padding: 15px; border-radius: 8px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>DeepSeek R1 服务状态三维报告</h2>
+        <div class="status-grid">
+            <div class="card %status_class%">
+                <h3>实时状态</h3>
+                <p>▶ 网络连接: <strong>%netStatus_text%</strong></p>
+                <p>▶ 服务状态: <strong>%serviceStatus_text%</strong></p>
+                <p>▶ 检测时间: %date% %time%</p>
+            </div>
+            <div class="globe">
+                <div class="globe-inner">
+                    <div style="position:absolute; top:40%; left:35%; font-size:24px; color:white;">
+                        %serviceStatus_text%
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ai-section">
+            <h3>AI诊断建议</h3>
+            %ai_advice%
+        </div>
+        
+        <button onclick="location.reload()" style="margin-top:15px; padding:10px 20px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer;">
+            重新检测
+        </button>
+    </div>
+</body>
+</html>
