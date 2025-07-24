@@ -7,7 +7,6 @@ https://example.com/detector-v2-dashboard.gif
 
 行业领先的AI服务监控解决方案** - 专为DeepSeek R1用户设计的全链路服务状态诊断系统，集网络探测、API监控、智能诊断于一体，保障AI服务稳定运行
 
-![检测工具演示](https://example.com/detector-demo.gif)  
 *实时监控演示 - 企业级服务健康看板*
 
 ## 🌟 核心价值主张
